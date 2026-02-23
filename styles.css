@@ -1,0 +1,692 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body and font settings */
+  body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  /* Navbar Styles */
+  .navbar {
+    background-color: #163360;
+    padding: 16px 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .logo i {
+    margin-right: 8px;
+  }
+  
+  .navbar .menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .menu a,
+  .navbar .menu button {
+    color: white;
+    margin-right: 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar .menu a:hover,
+  .navbar .menu button:hover {
+    color: #fefefe;
+  }
+  
+  .navbar .menu button {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar .menu button:hover {
+    background-color: white;
+    color: #3b82f6;
+  }
+  
+  .navbar .menu-icon {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .navbar.scrolled {
+    background-color: #2563eb;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: linear-gradient(rgba(32, 49, 115, 0.6), rgba(18, 25, 99, 0.6)), url('b.jpeg');
+
+
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 16px;
+  }
+  .cursor {
+    display: inline-block;
+    font-weight: bold;
+    color: #1d1d1d;
+    animation: blink 0.8s infinite, colorChange 1.5s infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* @keyframes colorChange {
+    0% { color: #ff9800; }
+    50% { color: #00eaff; }
+    100% { color: #ff9800; }
+} */
+  .hero-subtext {
+    font-size: 1.3rem;
+    color: #f0f0f0;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeSlideIn 2s ease-in-out forwards;
+    animation-delay: 3s;
+}
+@keyframes fadeSlideIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+  .hero .cta-buttons button {
+    background-color: #fefefe;
+    color: #3b82f6;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .hero .cta-buttons button:hover {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  /* About Section */
+  .about {
+    background-color: #fff;
+    padding: 80px 20px;
+  }
+  
+  .about .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+  .image-container {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    width: 100%; /* Ensures the image takes full width of the container */
+    max-width: 500px; /* Limits the max size of the image */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+    object-fit: cover; /* Ensures image covers the area without distortion */
+  }
+  
+  
+  .about-text {
+    flex: 1;
+    text-align: left;
+  }
+  
+  .about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  .about-text p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 24px;
+  }
+  
+  .learn-more-btn {
+    background-color: transparent;
+    border: 2px solid #3b82f6;
+    color: #3b82f6;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .learn-more-btn:hover {
+    background-color: #3b82f6;
+    color: white;
+  }
+  
+  /* How It Works Section */
+  .how-it-works {
+    background-color: #f9fafb;
+    padding: 80px 20px;
+  }
+  
+  .how-it-works h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .step {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 22%;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .step:hover {
+    transform: translateY(-10px);
+  }
+  
+  .step i {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    color: #3b82f6;
+  }
+  
+  .step h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+  .step p {
+    color: #666;
+    font-size: 1rem;
+  }
+  
+  /* Testimonials Section */
+  .testimonials {
+    background-color: #fff;
+    padding: 80px 20px;
+  }
+  
+  .testimonials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .testimonial-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .testimonial-card {
+    background-color: #f9fafb;
+    padding: 24px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+  }
+  
+  .testimonial-card p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 16px;
+  }
+  
+  .testimonial-card .author {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Footer Section */
+  footer {
+    background-color: #2d2d2d;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .footer-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+  }
+  
+  .footer-links a {
+    color: white;
+    margin: 0 16px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #3b82f6;
+  }
+  
+  /* Mobile Responsive Styles */
+  @media (max-width: 768px) {
+    .navbar .menu {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navbar .menu-icon {
+      display: block;
+    }
+  
+    .navbar .menu.open {
+      display: flex;
+    }
+  
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .cta-buttons button {
+      font-size: 1rem;
+      padding: 10px 20px;
+    }
+  
+    .about .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .steps {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .step {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  
+    .testimonial-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .testimonial-card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+/* Benefits Section */
+.benefits {
+    background-color: #fff;
+    padding: 80px 20px;
+  }
+  
+  .benefits h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .benefit-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  
+  .benefit-card {
+    background-color: #f9fafb;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: #e5e7eb; /* Darker background on hover */
+  }
+  
+  .benefit-card i {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    color: #3b82f6;
+    transition: color 0.3s ease;
+  }
+  
+  .benefit-card:hover i {
+    color: #2563eb; /* Color change on hover */
+  }
+  
+  .benefit-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+  .benefit-card p {
+    color: #666;
+    font-size: 1.1rem;
+  }
+  
+  /* Hover Symbol */
+  .benefit-card:hover::after {
+    /*content: '\2192'; /* Unicode for arrow symbol */
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: #2563eb; /* Symbol color */
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  
+  .benefit-card:hover::after {
+    opacity: 1; /* Symbol fades in on hover */
+  }
+  
+  /* Mobile Responsive for Benefits Section */
+  @media (max-width: 768px) {
+    .benefit-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .benefit-card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+ 
+  /* Hover Symbol for Steps */
+  .step-card:hover::after {
+    content: ''; /* Empty content */
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  
+  .step-card-choose:hover::after {
+    content: '\270D'; /* Pencil emoji for choose step */
+  }
+  
+  .step-card-sell:hover::after {
+    content: '\1F4E6'; /* Package emoji for sell step */
+  }
+  
+  .step-card-exchange:hover::after {
+    content: '\1F91D'; /* Handshake emoji for exchange step */
+  }
+  
+   /* How It Works Section */
+   .how-it-works {
+    background-color: #fff;
+    padding: 80px 20px;
+  }
+
+  .how-it-works h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+
+  .how-it-works .step-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .step-card {
+    background-color: #f9fafb;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+
+  .step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: #e5e7eb; /* Darker background on hover */
+  }
+
+  .step-card i {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    color: #3b82f6;
+    transition: color 0.3s ease;
+  }
+
+  .step-card:hover i {
+    color: #2563eb; /* Color change on hover */
+  }
+
+  .step-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: #333;
+  }
+
+  .step-card p {
+    color: #666;
+    font-size: 1.1rem;
+  }
+
+  /* Hover Symbol for Steps */
+  .step-card:hover::after {
+    content: ''; /* Empty content */
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+
+  .step-card-choose:hover::after {
+    content: '\270D'; /* Pencil emoji for choose step */
+  }
+
+  .step-card-sell:hover::after {
+    content: '\1F4E6'; /* Package emoji for sell step */
+  }
+
+  .step-card-exchange:hover::after {
+    content: '\1F91D'; /* Handshake emoji for exchange step */
+  }
+
+  /* Testimonial Section */
+  .testimonial {
+    background-color: #f8f8f8;
+    padding: 80px 20px;
+  }
+
+  .testimonial h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+  }
+
+  .testimonials {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .testimonial-card {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  }
+
+  .testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    background-color: #e5e7eb; /* Darker background on hover */
+  }
+
+  .testimonial-card img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+  }
+
+  .testimonial-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #333;
+  }
+
+  .testimonial-card p {
+    color: #666;
+    font-size: 1.1rem;
+  }
+
+  /* Hover Symbol for Testimonial Cards */
+  .testimonial-card:hover::after {
+    content: '\1F91D'; /* Handshake emoji */
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+
+  /* Mobile Responsive for How It Works and Testimonial Sections */
+  @media (max-width: 768px) {
+    .step-cards, .testimonials {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .step-card, .testimonial-card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Hover Symbol for Testimonial Cards */
+  .testimonial-card:hover::after {
+    content: '\1F91D'; /* Handshake emoji */
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Mobile Responsive for How It Works and Testimonial Sections */
+  @media (max-width: 768px) {
+    .step-cards, .testimonials {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .step-card, .testimonial-card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  }
+  
